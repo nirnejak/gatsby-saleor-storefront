@@ -1,21 +1,28 @@
 import React from "react"
 
+import PropTypes from "prop-types"
+
 import Link from "../utils/link"
 
 import "./ErrorContainer.scss"
 
-const ErrorContainer = () => {
+const ErrorContainer = ({ description, title }) => {
   return (
     <section className="error-container">
       <div className="error-container__content">
-        <h1>Not Found</h1>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+        <h1>{title}</h1>
+        <p>{description}</p>
         <Link to="/" className="btn">
           Back home
         </Link>
       </div>
     </section>
   )
+}
+
+ErrorContainer.propTypes = {
+  description: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 }
 
 export default ErrorContainer

@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter CodeDrips`,
-    description: `Gatsby Starter CodeDrips`,
-    author: `@codedrips`,
-    siteUrl: `https://codedrips.com`,
+    author: `@inkoop`,
+    description: `E-commerce Storefront Gatsby`,
+    siteUrl: `https://inkoop.io`,
+    title: `Storefront`,
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -23,24 +23,16 @@ module.exports = {
         icon: `src/assets/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
-    /*
     {
-      resolve: "gatsby-source-wordpress",
-      options: {
-        baseUrl: "wordpress.atollon.com.au",
-        protocol: "https",
-      }
+      resolve: `gatsby-plugin-sitemap`,
     },
     {
-      resolve: `gatsby-plugin-sitemap`
-    },
-    {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: 'https://atollon.com.au',
-        sitemap: 'https://atollon.com.au/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
+        host: "https://inkoop.io",
+        sitemap: "https://inkoop.io/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -56,6 +48,5 @@ module.exports = {
         exclude: [],
       },
     },
-    */
   ],
 }

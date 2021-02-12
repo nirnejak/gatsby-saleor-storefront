@@ -20,6 +20,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
+  "ignorePatterns": ["gatsby-config.js"],
   "plugins": ["react", "react-hooks"],
   "rules": {
     "react/jsx-no-useless-fragment": "error",
