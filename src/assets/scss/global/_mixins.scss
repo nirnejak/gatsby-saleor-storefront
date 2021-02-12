@@ -1,0 +1,50 @@
+/*********************
+BREAKPOINTS
+*********************/
+
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media (min-width: 1240px) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media (min-width: 900px) {
+      @content;
+    }
+  }
+}
+
+@mixin hoverline($color: #000, $size: 1px) {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 2px;
+  margin-bottom: -2px;
+  cursor: pointer;
+  color: $color;
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: $size;
+    background: $color;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-101%);
+  }
+
+  &:hover::before {
+    transform: translateX(0);
+  }
+}
+
+@mixin inner() {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 20px;
+  @include breakpoint(medium) {
+    padding: 0 30px;
+  }
+}

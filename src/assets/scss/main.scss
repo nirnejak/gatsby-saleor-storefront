@@ -1,0 +1,13 @@
+@import "global/fonts";
+
+:root {
+  --color-primary: #000000;
+  --color-secondary: #ffffff;
+  --font-primary: "Helvetica", sans-serif;
+  --container-primary: 1366px;
+}
+
+@import "global/mixins";
+@import "global/normalize";
+@import "global/form";
+@import "global/base";

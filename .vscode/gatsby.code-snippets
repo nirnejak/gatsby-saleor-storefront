@@ -1,0 +1,58 @@
+{
+  "Picture Snippet": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact,vue,html",
+    "prefix": "picture",
+    "body": [
+      "<picture>",
+      "  <source srcset=\"${3:large.webp}\" media=\"(${4:min-width: 992px})\" type=\"${5:image/webp}\">",
+      "  <source srcset=\"${6:large.jpg}\" media=\"(${7:min-width: 992px})\" type=\"${8:image/jpeg}\">",
+      "  <img src=\"${1:small.jpg}\" alt=\"$2\">",
+      "</picture>$0"
+    ],
+    "description": "HTML 5 Picture Element"
+  },
+  "Gatsby Image": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "gimage",
+    "body": [
+      "<Img",
+      "  fluid={${1:imgData}.file.childImageSharp.fluid}",
+      "  alt=\"${2:Image Alt}\"",
+      "/>$0"
+    ],
+    "description": "HTML 5 Picture Element"
+  },
+  "Gatsby Image Component": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "gic",
+    "body": [
+      "import React from \"react\"",
+      "import { useStaticQuery, graphql } from \"gatsby\"",
+      "import Img from \"gatsby-image\"",
+      "",
+      "const ${1:ImageComponentName} = () => {",
+      "  const data = useStaticQuery(graphql`",
+      "    query {",
+      "      placeholderImage: file(relativePath: { eq: \"${2:blogs/form_blog.png}\" }) {",
+      "        childImageSharp {",
+      "          fluid(maxWidth: ${3:300}) {",
+      "            ...GatsbyImageSharpFluid",
+      "          }",
+      "        }",
+      "      }",
+      "    }",
+      "  `)",
+      "",
+      "  return (",
+      "    <Img",
+      "      fluid={data.placeholderImage.childImageSharp.fluid}",
+      "      alt=\"${4:Image Alt}\"",
+      "    />",
+      "  )",
+      "}",
+      "",
+      "export default ${1:ImageComponentName}"
+    ],
+    "description": "Gatsby Single Image Component"
+  }
+}

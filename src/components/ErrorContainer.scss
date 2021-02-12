@@ -1,0 +1,21 @@
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 80vh;
+
+  &__content {
+    & > h1 {
+      font-family: var(--font-primary);
+      font-weight: bold;
+    }
+    & > p {
+      font-family: var(--font-primary);
+      font-weight: 200;
+    }
+    & > a {
+      font-family: var(--font-primary);
+    }
+  }
+}
