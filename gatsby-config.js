@@ -14,8 +14,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `atollon-design-studio`,
-        short_name: `atollon`,
+        name: `ecommerce-storefront`,
+        short_name: `storefront`,
         start_url: `/`,
         background_color: `#000000`,
         theme_color: `#000000`,
