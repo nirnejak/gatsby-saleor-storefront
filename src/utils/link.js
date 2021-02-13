@@ -1,5 +1,7 @@
 import React from "react"
+
 import GatsbyLink from "gatsby-link"
+
 import PropTypes from "prop-types"
 
 const Link = (props) => {
@@ -24,8 +26,8 @@ const Link = (props) => {
 }
 
 Link.propTypes = {
-  to: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
+  to: PropTypes.string.isRequired,
 }
 
 export default Link

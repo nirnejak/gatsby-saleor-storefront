@@ -32,6 +32,8 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
+    "react-query": "^3.9.3",
+    "react-query-devtools": "^2.6.3",
     "react-reveal": "^1.2.2",
     "react-transition-group": "^4.3.0",
     "sass": "^1.32.7",

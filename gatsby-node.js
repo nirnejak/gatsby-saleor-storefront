@@ -3,7 +3,7 @@ const path = require("path")
 const query = `
 {
   saleor {
-    products(channel: "default-channel") {
+    products(first: 100, channel: "default-channel") {
       edges {
         node {
           id
@@ -23,9 +23,9 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       component: path.resolve("./src/templates/product.js"),
       context: {
-        id: edge.node.id,
+        slug: edge.node.slug,
       },
-      path: `/product/${edge.node.slug}`,
+      path: `/product/${edge.node.slug}/`,
     })
   })
 }
