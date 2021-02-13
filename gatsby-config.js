@@ -3,14 +3,23 @@ module.exports = {
     author: `@inkoop`,
     description: `E-commerce Storefront Gatsby`,
     siteUrl: `https://inkoop.io`,
+    social: {
+      twitter: "",
+      facebook: "",
+      instagram: "",
+      linkedin: "",
+    },
     title: `Storefront`,
   },
   plugins: [
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-layout`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-catch-links`,
+    `gatsby-plugin-force-trailing-slashes`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -21,6 +30,22 @@ module.exports = {
         theme_color: `#000000`,
         display: `minimal-ui`,
         icon: `src/assets/images/favicon.png`, // This path is relative to the root of the site.
+      },
+    },
+
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        fieldName: `saleor`,
+        typeName: `Saleor`,
+        url: `https://ik-saleor.herokuapp.com/graphql/`,
+        refetchInterval: 60,
       },
     },
     {
@@ -37,7 +62,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-107595465-1",
+        trackingId: process.env.GOOGLE_ANALYTICS_ID,
         // Puts tracking script in the head instead of the body
         head: false,
         // Setting this parameter is optional
