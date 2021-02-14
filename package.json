@@ -34,7 +34,6 @@
     "react-helmet": "^6.1.0",
     "react-query": "^3.9.3",
     "react-reveal": "^1.2.2",
-    "react-transition-group": "^4.3.0",
     "sass": "^1.32.7"
   },
   "devDependencies": {
