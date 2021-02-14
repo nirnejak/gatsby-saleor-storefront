@@ -11,7 +11,7 @@ const Product = ({ data }) => {
 
   return (
     <>
-      <SEO title="Product Name" path="products/product-slug" />
+      <SEO title={product.seoTitle} path={product.seoDescription} />
       <h1>{product.name}</h1>
     </>
   )
@@ -24,6 +24,8 @@ export const productQuery = graphql`
         id
         name
         slug
+        seoTitle
+        seoDescription
         description
         category {
           name
@@ -47,6 +49,10 @@ export const productQuery = graphql`
           }
         }
         thumbnail {
+          url
+          alt
+        }
+        images {
           url
           alt
         }
