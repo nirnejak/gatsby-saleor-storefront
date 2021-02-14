@@ -19,7 +19,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const res = await graphql(query)
 
-  res.data.saleor.products.edges.map((edge) => {
+  res.data.saleor.products.edges.forEach((edge) => {
     createPage({
       component: path.resolve("./src/templates/product.js"),
       context: {
