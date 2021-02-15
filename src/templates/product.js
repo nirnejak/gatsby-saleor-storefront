@@ -6,7 +6,7 @@ import PropTypes from "prop-types"
 
 import SEO from "../components/seo"
 
-const Product = ({ data }) => {
+const ProductTemplate = ({ data }) => {
   const { product } = data.saleor
 
   return (
@@ -61,8 +61,8 @@ export const productQuery = graphql`
   }
 `
 
-Product.propTypes = {
+ProductTemplate.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default Product
+export default ProductTemplate

@@ -11,6 +11,14 @@ const query = `
         }
       }
     }
+    pages(first: 100) {
+      edges {
+        node {
+          id
+          slug
+        }
+      }
+    }
   }
 }
 `
@@ -26,6 +34,15 @@ exports.createPages = async ({ graphql, actions }) => {
         slug: edge.node.slug,
       },
       path: `/product/${edge.node.slug}/`,
+    })
+  })
+  res.data.saleor.page.edges.forEach((edge) => {
+    createPage({
+      component: path.resolve("./src/templates/page.js"),
+      context: {
+        slug: edge.node.slug,
+      },
+      path: `/${edge.node.slug}/`,
     })
   })
 }
