@@ -1,7 +1,9 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
+
 import { useStaticQuery, graphql } from "gatsby"
+
+import PropTypes from "prop-types"
 
 function SEO({ children, description, lang, meta, title, image, path }) {
   const { site } = useStaticQuery(query)
@@ -18,76 +20,76 @@ function SEO({ children, description, lang, meta, title, image, path }) {
       titleTemplate={title}
       meta={[
         {
-          name: `viewport`,
           content: `width=device-width, initial-scale=1`,
+          name: `viewport`,
         },
         {
-          name: `keywords`,
           content: `Lorem Ipsum dolor set amet`,
+          name: `keywords`,
         },
         {
-          name: `author`,
           content: site.siteMetadata.author,
+          name: `author`,
         },
         {
-          name: `image`,
           content: site.siteMetadata.siteImage,
+          name: `image`,
         },
         {
-          name: `description`,
           content: metaDescription,
+          name: `description`,
         },
         {
-          name: "application-name",
           content: "Atollon",
+          name: "application-name",
         },
         // Schema.org for Google
         {
-          itemprop: "name",
           content: site.siteMetadata.title,
+          itemprop: "name",
         },
         {
-          itemprop: "description",
           content: metaDescription,
+          itemprop: "description",
         },
         {
-          itemprop: "description",
           content: site.siteMetadata.siteImage,
+          itemprop: "description",
         },
         // Open Graph
         {
-          property: `og:url`,
           content: url,
+          property: `og:url`,
         },
         {
-          property: `og:title`,
           content: title,
+          property: `og:title`,
         },
         {
-          property: `og:description`,
           content: metaDescription,
+          property: `og:description`,
         },
         {
-          property: `og:type`,
           content: `website`,
+          property: `og:type`,
         },
         {
-          property: `og:image`,
           content: image || site.siteMetadata.siteImage,
+          property: `og:image`,
         },
         {
-          name: "canonical",
           href: url,
+          name: "canonical",
         },
         {
-          name: "alternate",
           href: url,
           hreflang: "en",
+          name: "alternate",
         },
         {
-          name: "alternate",
           href: url,
           hreflang: "x-default",
+          name: "alternate",
         },
       ].concat(meta)}
     >
@@ -101,19 +103,19 @@ function SEO({ children, description, lang, meta, title, image, path }) {
 }
 
 SEO.defaultProps = {
+  description: ``,
   lang: `en`,
   meta: [],
-  description: ``,
 }
 
 SEO.propTypes = {
   children: PropTypes.node,
   description: PropTypes.string,
+  image: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
-  image: PropTypes.string,
+  title: PropTypes.string.isRequired,
 }
 
 const query = graphql`

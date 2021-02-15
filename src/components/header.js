@@ -1,6 +1,6 @@
 import React from "react"
 
-// import Link from "../utils/link"
+// import Link from "./common/Link"
 
 import "./header.scss"
 

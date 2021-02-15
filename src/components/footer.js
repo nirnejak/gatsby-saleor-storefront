@@ -1,5 +1,7 @@
 import React from "react"
 
+// import Link from "./common/Link"
+
 import "./footer.scss"
 
 const Footer = () => {

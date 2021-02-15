@@ -1,6 +1,6 @@
 import React from "react"
 
-import ErrorContainer from "../components/ErrorContainer"
+import ErrorContainer from "../components/common/ErrorContainer"
 import Footer from "../components/footer"
 import Header from "../components/header"
 import SEO from "../components/seo.js"
