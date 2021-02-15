@@ -16,6 +16,7 @@ const query = `
         node {
           id
           slug
+          isPublished
         }
       }
     }
@@ -39,12 +40,14 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
   pages.edges.forEach((edge) => {
-    createPage({
-      component: path.resolve("./src/templates/page.js"),
-      context: {
-        slug: edge.node.slug,
-      },
-      path: `/${edge.node.slug}/`,
-    })
+    if (edge.node.isPublished) {
+      createPage({
+        component: path.resolve("./src/templates/page.js"),
+        context: {
+          slug: edge.node.slug,
+        },
+        path: `/${edge.node.slug}/`,
+      })
+    }
   })
 }
