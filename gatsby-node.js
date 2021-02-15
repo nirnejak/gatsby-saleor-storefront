@@ -27,7 +27,9 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const res = await graphql(query)
 
-  res.data.saleor.products.edges.forEach((edge) => {
+  const { products, pages } = res.data.saleor
+
+  products.edges.forEach((edge) => {
     createPage({
       component: path.resolve("./src/templates/product.js"),
       context: {
@@ -36,7 +38,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `/product/${edge.node.slug}/`,
     })
   })
-  res.data.saleor.page.edges.forEach((edge) => {
+  pages.edges.forEach((edge) => {
     createPage({
       component: path.resolve("./src/templates/page.js"),
       context: {
