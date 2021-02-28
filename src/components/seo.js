@@ -40,7 +40,7 @@ function SEO({ children, description, lang, meta, title, image, path }) {
           name: `description`,
         },
         {
-          content: "Atollon",
+          content: "Storefront",
           name: "application-name",
         },
         // Schema.org for Google
