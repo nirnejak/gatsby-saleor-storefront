@@ -4,22 +4,23 @@
 
 ## 🚀 Available Scripts
 
-    ```sh
-    npm start
-    ```
 
-    ```sh
-    npm run build
-    ```
+```sh
+npm start
+```
 
-    ```sh
-    npm run format
-    ```
+```sh
+npm run build
+```
 
-    ```sh
-    npm run lint
-    ```
+```sh
+npm run format
+```
 
-    ```sh
-    npm run lint-fix
-    ```
+```sh
+npm run lint
+```
+
+```sh
+npm run lint-fix
+```
