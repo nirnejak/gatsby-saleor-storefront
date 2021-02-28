@@ -1,7 +1,7 @@
 {
-  "name": "ecommerce-storefront",
+  "name": "gatsby-saleor-storefront",
   "private": true,
-  "description": "Inkoop E-Commerce Platform Storefront",
+  "description": "E-Commerce Storefront for Saleor Store built with Gatsby",
   "version": "0.1.0",
   "author": "Jitendra Nirnejak",
   "dependencies": {
@@ -76,9 +76,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kevivmatrix/ecommerce-storefront"
+    "url": "https://github.com/kevivmatrix/gatsby-saleor-storefront"
   },
   "bugs": {
-    "url": "https://github.com/kevivmatrix/ecommerce-storefront/issues"
+    "url": "https://github.com/kevivmatrix/gatsby-saleor-storefront/issues"
   }
 }

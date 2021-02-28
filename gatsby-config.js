@@ -2,9 +2,9 @@ const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
-    author: `@inkoop`,
+    author: `@nirnejak`,
     description: `E-commerce Storefront Gatsby`,
-    siteUrl: `https://inkoop.io`,
+    siteUrl: `https://mysite.com`,
     social: {
       twitter: "",
       facebook: "",
@@ -25,7 +25,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `ecommerce-storefront`,
+        name: `gatsby-saleor-storefront`,
         short_name: `storefront`,
         start_url: `/`,
         background_color: `#000000`,
@@ -56,8 +56,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://inkoop.io",
-        sitemap: "https://inkoop.io/sitemap.xml",
+        host: "https://mysite.com",
+        sitemap: "https://mysite.com/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
