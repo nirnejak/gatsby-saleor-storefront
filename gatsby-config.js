@@ -1,5 +1,7 @@
 const path = require(`path`)
 
+require(`dotenv`).config({ path: `.env` })
+
 module.exports = {
   siteMetadata: {
     author: `@nirnejak`,
@@ -46,7 +48,7 @@ module.exports = {
       options: {
         fieldName: `saleor`,
         typeName: `Saleor`,
-        url: `https://ik-saleor.herokuapp.com/graphql/`,
+        url: process.env.GRAPHQL_SOURCE,
         refetchInterval: 60,
       },
     },
